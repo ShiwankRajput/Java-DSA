@@ -24,6 +24,6 @@ public class Basics {
         float c = 3456.85309329f;
         System.out.printf("Formatted number is %.2f",c);
 
-        System.out.printf("PI : ");
+        System.out.printf("PI : %.2f",Math.PI);
     }
 }
