@@ -7,7 +7,7 @@ public class Singleton {
     A obj1 = A.getInstance();
 }
 
-// Steps to be a singleton Class is :
+// Steps to create a singleton Class is :
 class A{
     static A obj = new A();  //this object is static because getInstance method is static.
     private A(){
