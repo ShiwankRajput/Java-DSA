@@ -2,7 +2,7 @@
 //maximum in the array....
 //reverse of an array....
 
-package Arrays.basics;
+package Arrays.basics.question;
 
 import java.util.Arrays;
 import java.util.Scanner;

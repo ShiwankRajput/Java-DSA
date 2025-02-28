@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/two-sum/description/
 
-package Arrays.basics;
+package Arrays.basics.question;
 
 import java.util.Arrays;
 
