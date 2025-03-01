@@ -1,4 +1,4 @@
-package Arrays.Searching.LinearSearching;
+package Arrays.Searching.LinearSearching.question;
 
 public class SearchInRange {
 
