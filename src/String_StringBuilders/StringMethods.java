@@ -2,7 +2,7 @@ package String_StringBuilders;
 
 import java.util.Arrays;
 
-public class Methods {
+public class StringMethods {
 
     public static void main(String[] args) {
 

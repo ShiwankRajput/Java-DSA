@@ -1,4 +1,4 @@
-package String_StringBuilders;
+package String_StringBuilders.questions;
 
 public class Palindrome {
 
