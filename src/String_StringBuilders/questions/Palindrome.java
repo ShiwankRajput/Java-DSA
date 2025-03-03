@@ -7,6 +7,7 @@ public class Palindrome {
         String name = "abcdcba";
 
         System.out.println(isPalindrome(name));
+        System.out.println(isPalindrome1(name));
 
     }
 
@@ -24,6 +25,27 @@ public class Palindrome {
             if (start != end) {
                 return false;
             }
+        }
+
+        return true;
+    }
+
+
+    static boolean isPalindrome1(String s){
+
+        if(s.length()==0 || s == null){
+            return true;
+        }
+
+        int i=0;
+        int j=s.length()-1;
+
+        while(i<s.length()-1 && i<j){
+            if(s.charAt(i) != s.charAt(j)){
+                return false;
+            }
+            i++;
+            j--;
         }
 
         return true;
