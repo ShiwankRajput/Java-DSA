@@ -10,15 +10,20 @@ public class BinarySearchAlgo {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        int[] arr = new int[8];
-        System.out.println("Enter array elements in sorted  order -> ");
-        for (int i=0; i<arr.length; i++){
-            arr[i] = input.nextInt();
-        }
+//        Scanner input = new Scanner(System.in);
+//        int[] arr = new int[8];
+//        System.out.println("Enter array elements in sorted  order -> ");
+//        for (int i=0; i<arr.length; i++){
+//            arr[i] = input.nextInt();
+//        }
+//
+//        System.out.print("Enter element you want to search -> ");
+//        int target = input.nextInt();
 
-        System.out.print("Enter element you want to search -> ");
-        int target = input.nextInt();
+        int[] arr = {4, 15, 17, 17, 19, 20, 21, 22, 22, 25, 26, 26, 26, 28, 28, 28, 31, 31, 32, 33, 34, 34, 35,
+                36, 36, 37, 38, 38, 39, 41, 41, 42, 43, 43, 44, 44, 45, 45, 46, 47, 49, 49, 50, 50,
+                50, 51, 53, 54, 54, 56, 57, 58, 58, 59, 60, 64, 67, 69, 75, 94};
+        int target = 26;
 
         System.out.print("Element is present at index -> " + binarySearch(arr,target));
 
@@ -32,7 +37,7 @@ public class BinarySearchAlgo {
 
              int mid = (start+end)/2;
 
-             if(arr[mid] == target){
+             if(arr[mid] == target && arr[mid] != arr[mid+1]){  //this case returns last index of target;
                 return mid;
              }
 

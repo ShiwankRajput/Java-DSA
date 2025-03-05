@@ -1,4 +1,4 @@
-package Arrays.Searching.BinarySearch;
+package Arrays.Searching.BinarySearch.questions;
 
 //finding targeted element in the rotated array (with distinct element)....
 

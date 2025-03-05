@@ -1,4 +1,4 @@
-package Arrays.Searching.BinarySearch;
+package Arrays.Searching.BinarySearch.questions;
 
 public class Search_In_MountainArray {
 

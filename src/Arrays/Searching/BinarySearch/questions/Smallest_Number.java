@@ -1,6 +1,6 @@
 //smallest number greater than the target
 
-package Arrays.Searching.BinarySearch;
+package Arrays.Searching.BinarySearch.questions;
 
 public class Smallest_Number {
 
