@@ -1,4 +1,4 @@
-package Arrays.Sorting.CycleSort;
+package Arrays.Sorting.CycleSort.questions;
 
 import java.util.Arrays;
 

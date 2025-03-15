@@ -1,10 +1,10 @@
-package Arrays.Sorting.CycleSort;
+package Arrays.Sorting.CycleSort.questions;
 
 //https://leetcode.com/problems/find-all-duplicates-in-an-array/
+//same as LeetCode : (448)
 
-import javax.swing.plaf.SplitPaneUI;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Find_All_Duplicates {
@@ -18,6 +18,7 @@ public class Find_All_Duplicates {
 
     public static List<Integer> all_Duplicates(int[] arr){
 
+        //apply cyclic sort
         int i=0;
         while(i<arr.length){
             int correctIndex = arr[i]-1;
