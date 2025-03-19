@@ -1,12 +1,10 @@
-package Recursion;
+package Recursion.IntoductionToRecursion;
 
-public class n_to_1 {
+public class _1_to_n {
 
     public static void main(String[] args) {
 
-        int num = 5;
-
-        printNumbers(num);
+        printNumbers(5);
 
     }
 
@@ -15,7 +13,7 @@ public class n_to_1 {
             return;
         }
 
-        System.out.println(n);
         printNumbers(n-1);
+        System.out.println(n);
     }
 }

@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.IntoductionToRecursion;
 
 public class sumOfNumberFrom_1_to_n {
 
