@@ -1,4 +1,4 @@
-package Recursion.IntoductionToRecursion;
+package Recursion.Level2_ArrayQuestions;
 
 public class RecursiveBS {
 

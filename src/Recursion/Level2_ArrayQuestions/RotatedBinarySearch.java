@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Level2_ArrayQuestions;
 
 public class RotatedBinarySearch {
 
@@ -10,6 +10,7 @@ public class RotatedBinarySearch {
         System.out.println("Element is present at => " + binarySearch(arr,target,0,arr.length-1));
     }
 
+    //without finding pivot element
     static int binarySearch(int[] arr, int target, int s, int e){
 
         if(s>e){
