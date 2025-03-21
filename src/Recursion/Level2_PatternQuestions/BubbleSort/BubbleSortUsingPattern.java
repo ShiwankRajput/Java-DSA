@@ -1,9 +1,8 @@
-package Recursion;
+package Recursion.Level2_PatternQuestions.BubbleSort;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class BubbleSort {
+public class BubbleSortUsingPattern {
 
     public static void main(String[] args) {
 

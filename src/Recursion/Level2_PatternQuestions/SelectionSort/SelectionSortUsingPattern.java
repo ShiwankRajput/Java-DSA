@@ -1,8 +1,8 @@
-package Recursion;
+package Recursion.Level2_PatternQuestions.SelectionSort;
 
 import java.util.Arrays;
 
-public class SelectionSort {
+public class SelectionSortUsingPattern {
 
     public static void main(String[] args) {
 
