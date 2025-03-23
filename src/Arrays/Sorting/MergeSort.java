@@ -60,7 +60,7 @@ public class MergeSort {
         for (int i = low; i <= high; i++) {
             arr[i] = temp.get(i - low);
         }
-    }
+                           }
 }
 
 
