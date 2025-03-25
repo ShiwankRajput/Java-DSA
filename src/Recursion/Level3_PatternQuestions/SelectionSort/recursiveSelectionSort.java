@@ -1,4 +1,4 @@
-package Recursion.Level2_PatternQuestions.SelectionSort;
+package Recursion.Level3_PatternQuestions.SelectionSort;
 
 import java.util.Arrays;
 

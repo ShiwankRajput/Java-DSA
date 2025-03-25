@@ -1,4 +1,4 @@
-package Recursion.IntoductionToRecursion;
+package Recursion.Level1;
 
 public class FactorialNumber {
 

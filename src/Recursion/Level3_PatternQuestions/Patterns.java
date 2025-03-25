@@ -1,4 +1,4 @@
-package Recursion.Level2_PatternQuestions;
+package Recursion.Level3_PatternQuestions;
 
 public class Patterns {
 
