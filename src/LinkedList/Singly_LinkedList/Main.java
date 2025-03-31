@@ -14,6 +14,8 @@ public class Main {
         list.insertAtIndex(40,3);
 
         System.out.println("Deleted node is -> " + list.deleteFirst());
+        System.out.println("Deleted node is -> " + list.deleteLast());
+        System.out.println("Deleted node is -> " + list.deleteParticular(2));
 
         list.display();
     }
