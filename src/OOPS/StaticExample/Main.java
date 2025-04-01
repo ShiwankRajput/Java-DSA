@@ -1,23 +1,17 @@
 package OOPS.StaticExample;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        Human shiwank = new Human(21,"Shiwank",60000,false);
-        Human rahul = new Human(25,"Rahul",50000,true);
+        Human h1 = new Human(15,"Shiwank",15000,false);
+        Human h2 = new Human(25,"Dev",15000,true);
 
+        System.out.println(h1.name);
+        System.out.println(h2.name);
+        System.out.println(Human.population); //since population is static so it is accessed by class name not object
         System.out.println(Human.population);
-        System.out.println(Human.population);
 
     }
 
-    //static does not depend on objects.So,you cannot use non-static within it unless you create a object of it.
-    static void fun(){
-        //greeting();
-    }
-
-    //non-static depends on objects.
-    void greeting(){
-        System.out.println("hello world");
-    }
 }

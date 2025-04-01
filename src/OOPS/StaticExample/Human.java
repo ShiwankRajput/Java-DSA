@@ -6,9 +6,14 @@ public class Human {
     String name;
     int salary;
     boolean married;
-    static int population;  //common to all human so it is to be static
+    static long population;
 
-    public Human(int age,String name,int salary,boolean married){
+    static void message(){
+        System.out.println("hello everyone");
+        // System.out.println(this.age);  //this can't be used here as it belongs to instance.
+    }
+
+    public Human(int age, String name, int salary, boolean married){
         this.age = age;
         this.name = name;
         this.salary = salary;
@@ -16,8 +21,4 @@ public class Human {
         Human.population += 1;
     }
 
-    static void message() {
-        System.out.println("message is forwarded");
-//        System.out.println(this.age);  //this belongs to object and static does not require objects.thus,gives error
-    }
 }
