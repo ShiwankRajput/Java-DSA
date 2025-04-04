@@ -6,6 +6,12 @@ public class Parent {
     double w;
     double h;
 
+    private double perimeter = 78.00;
+
+    public double getPerimeter(){
+        return perimeter;
+    }
+
     public Parent(){
         this.l = 1;
         this.w = 1;

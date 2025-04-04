@@ -26,6 +26,11 @@ public class Main {
         System.out.println(obj7.price);
 
 
+        //encapsulation part -->
+
+        Parent obj8 = new Parent();
+        System.out.println(obj8.getPerimeter());
+
 
     }
 
