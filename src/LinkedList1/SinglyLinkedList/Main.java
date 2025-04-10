@@ -1,4 +1,4 @@
-package LinkedList.Singly_LinkedList;
+package LinkedList1.SinglyLinkedList;
 
 public class Main {
 
@@ -15,8 +15,11 @@ public class Main {
 
         System.out.println("Deleted node is -> " + list.deleteFirst());
         System.out.println("Deleted node is -> " + list.deleteLast());
-        System.out.println("Deleted node is -> " + list.deleteParticular(2));
+        System.out.println("Deleted node is -> " + list.deleteFromIndex(2));
 
         list.display();
+
+        System.out.println("Get node -> " + list.find(8));
+
     }
 }
