@@ -1,4 +1,4 @@
-package LinkedList1.SinglyLinkedList;
+package LinkedList.SinglyLinkedList;
 
 public class LL {
 
