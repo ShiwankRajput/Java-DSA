@@ -92,6 +92,26 @@ public class LL {
 
     }
 
+    //insertion using recursion at particular index :
+    public void insertRecursion(int val, int index){
+
+        head = insertAt(val,index,head);
+
+    }
+
+    private Node insertAt(int val, int index, Node node){
+
+        if(index == 0){
+            Node temp = new Node(val,node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertAt(val, --index, node.next);
+
+        return node;
+    }
+
     // (2) DISPLAY -->
 
     // this is to display LinkedList
@@ -203,6 +223,55 @@ public class LL {
             this.value = value;
             this.next = next;
         }
+
+    }
+
+
+    // QUESTIONS :
+
+    //https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
+    //remove duplicates in sorted linkedList ->
+
+    public void removeDuplicates(){
+
+//        Node temp = head;
+//        Node temp1 = head.next;
+//
+//        while(temp1 != null){
+//
+//            if(temp.value == temp1.value){
+//                temp1 = temp1.next;
+//                size--;
+//            }
+//            else{
+//                temp.next = temp1;
+//                temp = temp1;
+//                temp1 = temp1.next;
+//            }
+//        }
+//
+//        if(temp1 == null){
+//            temp.next = null;
+//        }
+
+                        //OR
+
+        Node temp = head;
+
+        while(temp.next != null){
+
+            if(temp.value == temp.next.value){
+                temp.next = temp.next.next;
+                size--;
+            }
+            else{
+                temp = temp.next;
+            }
+        }
+
+        // if there is no concept of tail, just remove it
+        tail = temp;
+        tail.next = null;
 
     }
 }
