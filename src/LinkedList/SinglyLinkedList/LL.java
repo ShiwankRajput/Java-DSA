@@ -10,7 +10,9 @@ public class LL {
     private int size;
 
     public LL(){
+
         this.size = 0;
+
     }
 
     // (1) INSERTION -->
@@ -230,7 +232,7 @@ public class LL {
     // QUESTIONS :
 
     //https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
-    //remove duplicates in sorted linkedList ->
+    // 1 -> remove duplicates in sorted linkedList :
 
     public void removeDuplicates(){
 
@@ -274,4 +276,78 @@ public class LL {
         tail.next = null;
 
     }
+
+
+    //https://leetcode.com/problems/merge-two-sorted-lists/description/
+    // 2 -> merge two sorted linked list :
+
+    public LL mergeList(LL list1, LL list2){
+
+        Node head1 = list1.head;
+        Node head2 = list2.head;
+
+        LL ans = new LL();
+
+        while(head1 != null && head2 != null){
+            if(head1.value <= head2.value){
+                ans.insertLast(head1.value);
+                head1 = head1.next;
+            }
+            else{
+                ans.insertLast(head2.value);
+                head2 = head2.next;
+            }
+        }
+
+        //remaining node of list1 if any
+        while(head1 != null){
+            ans.insertLast(head1.value);
+            head1 = head1.next;
+        }
+
+        //remaining node of list2 if any
+        while(head2 != null){
+            ans.insertLast(head2.value);
+            head2 = head2.next;
+        }
+
+        return ans;
+
+
+                        //OR (actual answer)
+
+        /*
+
+            ListNode dummy = new ListNode(-1);
+            ListNode current = dummy;
+
+            // Traverse both lists
+            while (list1 != null && list2 != null) {
+                if (list1.val <= list2.val) {
+                    current.next = list1;
+                    list1 = list1.next;
+                } else {
+                    current.next = list2;
+                    list2 = list2.next;
+                }
+                current = current.next;
+            }
+
+            // Attach remaining nodes, if any
+            if (list1 != null) {
+                current.next = list1;
+            } else {
+                current.next = list2;
+            }
+
+            return dummy.next; // Return the merged list, skipping the dummy node
+
+        */
+
+    }
+
+
+
+
+
 }

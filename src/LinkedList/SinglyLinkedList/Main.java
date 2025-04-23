@@ -1,5 +1,7 @@
 package LinkedList.SinglyLinkedList;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -24,15 +26,29 @@ public class Main {
 //        list.insertRecursion(48,2);
 //        list.display();
 
-        list.insertFirst(3);
-        list.insertFirst(3);
-        list.insertFirst(2);
-        list.insertFirst(1);
-        list.insertFirst(1);
+//        list.insertLast(1);
+//        list.insertLast(3);
+//        list.insertLast(5);
+//        list.insertLast(1);
+//
+//        list.display();
+//        list.removeDuplicates();
+//        list.display();
 
-        list.display();
-        list.removeDuplicates();
-        list.display();
+        LL list1 = new LL();
+        list1.insertLast(1);
+        list1.insertLast(3);
+        list1.insertLast(5);
+
+        LL list2 = new LL();
+
+        list2.insertLast(1);
+        list2.insertLast(2);
+        list2.insertLast(9);
+        list2.insertLast(14);
+
+        LL ans = list.mergeList(list1,list2);
+        ans.display();
 
     }
 }
