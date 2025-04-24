@@ -2,6 +2,14 @@ package LinkedList.questions;
 
 public class CycleQuestion {
 
+    public static void main(String[] args) {
+
+        CycleQuestion obj = new CycleQuestion();
+
+        System.out.println(obj.isHappy(2));
+
+    }
+
     //https://leetcode.com/problems/linked-list-cycle/
     // 3 -> linked list cycle1 :
 
@@ -55,6 +63,43 @@ public class CycleQuestion {
         }
 
         return length;
+
+    }
+
+
+    //https://leetcode.com/problems/happy-number/description/
+    // 7 -> Happy number
+
+    public boolean isHappy(int n){
+
+        int slow = n;
+        int fast = n;
+
+        do{
+            slow = findSquare(slow);
+            fast = findSquare(findSquare(fast));
+        }
+        while(slow != fast);
+
+        if(slow == 1){
+            return true; // n is happy number
+        }
+
+        return false;  // n is not happy number
+
+    }
+
+    public int findSquare(int n){
+
+        int ans = 0;
+
+        while(n != 0){
+            int rem = n%10;
+            ans = ans + (rem*rem);
+            n = n/10;
+        }
+
+        return ans;
 
     }
 

@@ -236,25 +236,29 @@ public class LL {
 
     public void removeDuplicates(){
 
-//        Node temp = head;
-//        Node temp1 = head.next;
-//
-//        while(temp1 != null){
-//
-//            if(temp.value == temp1.value){
-//                temp1 = temp1.next;
-//                size--;
-//            }
-//            else{
-//                temp.next = temp1;
-//                temp = temp1;
-//                temp1 = temp1.next;
-//            }
-//        }
-//
-//        if(temp1 == null){
-//            temp.next = null;
-//        }
+        /*
+
+            Node temp = head;
+            Node temp1 = head.next;
+
+            while(temp1 != null){
+
+                if(temp.value == temp1.value){
+                    temp1 = temp1.next;
+                    size--;
+                }
+                else{
+                    temp.next = temp1;
+                    temp = temp1;
+                    temp1 = temp1.next;
+                }
+            }
+
+            if(temp1 == null){
+                temp.next = null;
+            }
+
+        */
 
                         //OR
 
@@ -347,7 +351,32 @@ public class LL {
     }
 
 
+    //https://leetcode.com/problems/middle-of-the-linked-list/description/
+    // 8 ->  middle of the linked list
 
+    public void findMiddle(){
+
+        Node ans = helpFindMiddle(head);
+
+        System.out.println(ans.value);
+
+    }
+
+    public Node helpFindMiddle(Node head){
+
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+
+            slow = slow.next;
+            fast = fast.next.next;
+
+        }
+
+        return slow;
+
+    }
 
 
 }

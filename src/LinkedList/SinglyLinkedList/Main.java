@@ -35,20 +35,32 @@ public class Main {
 //        list.removeDuplicates();
 //        list.display();
 
-        LL list1 = new LL();
-        list1.insertLast(1);
-        list1.insertLast(3);
-        list1.insertLast(5);
+//        LL list1 = new LL();
+//        list1.insertLast(1);
+//        list1.insertLast(3);
+//        list1.insertLast(5);
+//
+//        LL list2 = new LL();
+//
+//        list2.insertLast(1);
+//        list2.insertLast(2);
+//        list2.insertLast(9);
+//        list2.insertLast(14);
+//
+//        LL ans = list.mergeList(list1,list2);
+//        ans.display();
 
-        LL list2 = new LL();
+        list.insertLast(19);
+        list.insertLast(82);
+        list.insertLast(68);
+        list.insertLast(100);
+        list.insertLast(1);
+        list.insertLast(2);
+        list.insertLast(3);
+        list.insertLast(5);
 
-        list2.insertLast(1);
-        list2.insertLast(2);
-        list2.insertLast(9);
-        list2.insertLast(14);
+        list.findMiddle();
 
-        LL ans = list.mergeList(list1,list2);
-        ans.display();
 
     }
 }
