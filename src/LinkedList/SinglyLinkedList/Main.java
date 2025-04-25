@@ -60,6 +60,11 @@ public class Main {
         list.insertLast(5);
 
         list.findMiddle();
+        list.display();
+        list.reverseLL();
+        list.display();
+        list.iterateRecurLL();
+        list.display();
 
 
     }

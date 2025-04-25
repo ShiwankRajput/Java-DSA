@@ -212,6 +212,7 @@ public class LL {
 
     }
 
+
     private class Node{
 
         private int value;
@@ -378,5 +379,64 @@ public class LL {
 
     }
 
+
+    // 10 - reverse of linkedList (using Recursion) :
+    public void reverseLL(){
+
+        helpReverseLL(head);
+
+    }
+
+    public void helpReverseLL(Node node){
+
+        if(node == tail){
+            head = tail;
+            return;
+        }
+
+        helpReverseLL(node.next);
+
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+
+    }
+
+
+    //https://leetcode.com/problems/reverse-linked-list/submissions/1617313110/
+    // 11 - reverse Of linkedList (using iteration) :
+    public void iterateRecurLL(){
+
+        head = helpIterateRecurLL(head);
+
+    }
+
+    public Node helpIterateRecurLL(Node head){
+
+        if(head == null){
+            return head;
+        }
+
+        Node prev = null;
+        Node pres = head;
+        Node next = head.next;
+
+        while(pres != null){
+
+            pres.next = prev;
+            prev = pres;
+            pres = next;
+
+            if(next != null){
+                next = next.next;
+            }
+
+        }
+
+        head = prev;
+
+        return head;
+
+    }
 
 }
