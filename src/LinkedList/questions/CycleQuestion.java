@@ -59,11 +59,39 @@ public class CycleQuestion {
                 }
                 while(temp != slow);
 
+                return length;
+
             }
         }
 
-        return length;
+        return 0; //no cycle present
 
+    }
+
+
+    // 6 - LinkedList cycle II
+    public ListNode detectCycle(ListNode head){
+
+        ListNode f = head;
+        ListNode s = head;
+
+        int length = cycleLength(head);
+
+        if(length == 0){
+            return null;
+        }
+
+        while(length != 0){
+            s = s.next;
+            length = length-1;
+        }
+
+        while(f != s){
+            f = f.next;
+            s = s.next;
+        }
+
+        return f;
     }
 
 
