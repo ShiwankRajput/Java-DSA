@@ -483,4 +483,66 @@ public class LL {
 
     }
 
+
+    //https://leetcode.com/problems/palindrome-linked-list/
+    // 13 - Palindrome linked list :
+
+    public boolean isPalindrome(Node head) {
+
+        Node mid = helpFindMiddle(head);
+        Node headSecond = helpIterateRecurLL(mid);
+        Node re_reverse = headSecond;
+        boolean palindrome = true;
+
+        //compare both head and headSecond value
+        while(head!=null && headSecond!=null){
+
+            if(head.value != headSecond.value){
+                palindrome = false;
+                break;
+            }
+
+            head = head.next;
+            headSecond = headSecond.next;
+
+        }
+
+        helpIterateRecurLL(re_reverse);
+
+        if(palindrome == false){
+            return false;
+        }
+
+        return palindrome;
+
+    }
+
+
+    //https://leetcode.com/problems/reorder-list/
+    // 14 - Reorder LinkedList :
+
+    public void reorderList(Node head) {
+
+        Node mid = helpFindMiddle(head);
+        Node headFirst = head;
+        Node headSecond = helpIterateRecurLL(mid);
+
+        Node temp;
+
+        while(headFirst!=null || headSecond!=null){
+            temp = headFirst.next;
+            headFirst.next = headSecond;
+            headFirst = temp;
+            temp = headSecond.next;
+            headSecond.next = headFirst;
+            headSecond = temp;
+        }
+
+        // condition so that cycle could not occur
+        if(headFirst != null){
+            headFirst.next = null;
+        }
+
+    }
+
 }
