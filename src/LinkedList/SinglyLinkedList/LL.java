@@ -545,4 +545,99 @@ public class LL {
 
     }
 
+
+    //https://leetcode.com/problems/rotate-list/
+    // 17 - Rotate LinkedList :
+
+    public Node rotateRight(Node head, int k) {
+
+        if(k<=0 || head==null || head.next==null){
+            return head;
+        }
+
+        Node last = head;
+        int length = 1;
+        while(last.next != null){
+            last = last.next;
+            length++;
+        }
+        last.next = head;
+
+        int rotations = k % length;
+        int skip = length-rotations;
+
+        Node newLast = head;
+        for(int i=0; i<(length-k-1); i++){
+            newLast = newLast.next;
+        }
+
+        head = newLast.next;
+        newLast.next = null;
+
+        return head;
+
+    }
+
+
+    //https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
+    // delete Middle Node of linkedList :
+
+    public Node deleteMiddle(Node head) {
+
+        // if a single node is present then it is only the middle. So, just remove it
+        if(head==null || head.next==null){
+            return null;
+        }
+
+        Node slow = head;
+        Node fast = head;
+        Node newSlow = null;
+
+        while( (fast != null) && (fast.next != null) ){
+
+            Node temp = slow;
+            slow = slow.next;
+            newSlow = temp;
+            fast = fast.next.next;
+
+        }
+
+        newSlow.next = slow.next;
+        slow.next = null;
+
+        return head;
+
+    }
+
+
+//    public Node addTwoNumbers(Node l1, Node l2) {
+//
+//        if(l1.value == 0 && l2.value == 0){
+//            return
+//        }
+//
+//        int val1 = 0;
+//        int val2 = 0;
+//
+//        while(l1 != null){
+//            String a = l1.value+"";
+//            val1 = Integer.parseInt(a);
+//        }
+//
+//        while(l2 != null){
+//            String b = l2.value+"";
+//            val2 = Integer.parseInt(b);
+//        }
+//
+//        int sum = val1+ val2;
+//
+//        while(sum != 0){
+//            int rem = sum%10;
+//
+//            sum = sum/10;
+//        }
+//
+//    }
+
+
 }
