@@ -610,34 +610,102 @@ public class LL {
     }
 
 
-//    public Node addTwoNumbers(Node l1, Node l2) {
-//
-//        if(l1.value == 0 && l2.value == 0){
-//            return
-//        }
-//
-//        int val1 = 0;
-//        int val2 = 0;
-//
-//        while(l1 != null){
-//            String a = l1.value+"";
-//            val1 = Integer.parseInt(a);
-//        }
-//
-//        while(l2 != null){
-//            String b = l2.value+"";
-//            val2 = Integer.parseInt(b);
-//        }
-//
-//        int sum = val1+ val2;
-//
-//        while(sum != 0){
-//            int rem = sum%10;
-//
-//            sum = sum/10;
-//        }
-//
-//    }
+    //https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+    // Remove Nth node from end of list
+
+    public Node removeNthFromEnd(Node head, int n) {
+
+        if(head==null || head.next==null){
+            return null;
+        }
+
+        if(n==0){
+            return head;
+        }
+
+        head = helpIterateRecurLL(head);
+
+        Node prev = null;
+        Node current = head;
+        Node next = current.next;
+
+        for(int i=0; i<(n-1); i++){
+            prev = current;
+            current = next;
+            next = next.next;
+        }
+
+        if(prev == null){
+            head = head.next;
+            current.next = null;
+        }else{
+            prev.next = next;
+            current.next = null;
+        }
+
+
+        head = helpIterateRecurLL(head);
+
+        return head;
+
+    }
+
+
+
+    //https://leetcode.com/problems/odd-even-linked-list/
+    // odd-even Linked List
+
+    public Node oddEvenList(Node head) {
+
+        if(head == null || head.next == null || head.next.next == null){
+            return head;
+        }
+
+        Node prev = null;
+        Node current = head;
+        Node next = current.next;
+        Node evenFirst = null;
+
+        int i=0;
+
+        while(current.next != null){
+
+            if((i+1)%2 != 0){
+                current.next = next.next;
+                prev = current;
+                current = next;
+                next = next.next;
+            }
+            else{
+
+                if(i == 1){
+                    evenFirst = current;
+                }
+
+                current.next = next.next;
+                prev = current;
+                current = next;
+                next = next.next;
+
+            }
+
+            i = i+1;
+
+        }
+
+        if(i%2 == 0){
+            current.next = evenFirst;
+            prev.next = null;
+        }
+        else{
+            prev.next = evenFirst;
+            current.next = null;
+        }
+
+
+        return head;
+
+    }
 
 
 }
