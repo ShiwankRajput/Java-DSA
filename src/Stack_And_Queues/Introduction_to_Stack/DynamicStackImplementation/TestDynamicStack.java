@@ -1,12 +1,13 @@
-package Stack_And_Queues.DynamicStackImplementation;
+package Stack_And_Queues.Introduction_to_Stack.DynamicStackImplementation;
 
-import Stack_And_Queues.CustomStackImplementation.StackException;
+import Stack_And_Queues.DynamicStackImplementation.DynamicStack;
+import Stack_And_Queues.Introduction_to_Stack.CustomStackImplementation.StackException;
 
 public class TestDynamicStack {
 
     public static void main(String[] args) throws StackException {
 
-        DynamicStack stack = new DynamicStack(4);
+        Stack_And_Queues.DynamicStackImplementation.DynamicStack stack = new DynamicStack(4);
 
         stack.push(15);
         stack.push(120);

@@ -1,4 +1,4 @@
-package Stack_And_Queues.CustomStackImplementation;
+package Stack_And_Queues.Introduction_to_Stack.CustomStackImplementation;
 
 public class CustomStack {
 

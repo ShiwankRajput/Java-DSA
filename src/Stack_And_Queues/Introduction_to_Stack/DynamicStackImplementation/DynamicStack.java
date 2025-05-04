@@ -1,7 +1,7 @@
-package Stack_And_Queues.DynamicStackImplementation;
+package Stack_And_Queues.Introduction_to_Stack.DynamicStackImplementation;
 
-import Stack_And_Queues.CustomStackImplementation.CustomStack;
-import Stack_And_Queues.CustomStackImplementation.StackException;
+import Stack_And_Queues.Introduction_to_Stack.CustomStackImplementation.CustomStack;
+import Stack_And_Queues.Introduction_to_Stack.CustomStackImplementation.StackException;
 
 public class DynamicStack extends CustomStack {
 
