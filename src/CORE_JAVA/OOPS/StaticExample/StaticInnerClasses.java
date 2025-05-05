@@ -1,9 +1,9 @@
-package OOPS.StaticExample;
+package CORE_JAVA.OOPS.StaticExample;
 
 //outside classes cannot be static because it does not depends on other class, whereas innerClasses may
 // or may not be static
 
-public class InnerClasses {
+public class StaticInnerClasses {
 
     static class Test{
         String name;
