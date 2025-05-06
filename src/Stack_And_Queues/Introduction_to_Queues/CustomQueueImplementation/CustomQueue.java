@@ -2,7 +2,7 @@ package Stack_And_Queues.Introduction_to_Queues.CustomQueueImplementation;
 
 public class CustomQueue {
 
-    private int[] data;
+    protected int[] data;
     private static final int DEFAULT_SIZE = 10;
 
     private int end = 0;
