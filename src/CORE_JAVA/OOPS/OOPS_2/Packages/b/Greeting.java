@@ -1,4 +1,4 @@
-package CORE_JAVA.OOPS.Packages.b;
+package CORE_JAVA.OOPS.OOPS_2.Packages.b;
 
 public class Greeting {
 

@@ -1,6 +1,6 @@
-package CORE_JAVA.OOPS.Packages.a;
+package CORE_JAVA.OOPS.OOPS_2.Packages.a;
 
-import static CORE_JAVA.OOPS.Packages.b.Greeting.message;
+import static CORE_JAVA.OOPS.OOPS_2.Packages.b.Greeting.message;
 
 public class Greeting {
 

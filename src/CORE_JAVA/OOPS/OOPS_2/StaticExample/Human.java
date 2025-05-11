@@ -1,4 +1,4 @@
-package CORE_JAVA.OOPS.StaticExample;
+package CORE_JAVA.OOPS.OOPS_2.StaticExample;
 
 public class Human {
 

@@ -1,4 +1,4 @@
-package CORE_JAVA.OOPS.ClassesAndObjects;
+package CORE_JAVA.OOPS.OOPS_1.ClassesAndObjects;
 
 public class ClassesObjects {
 

@@ -1,4 +1,4 @@
-package CORE_JAVA.OOPS.SingletonClass;
+package CORE_JAVA.OOPS.OOPS_2.SingletonClass;
 
 class SingletonClass {
 
