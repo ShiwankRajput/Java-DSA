@@ -1,0 +1,15 @@
+Trees Introduction -->
+
+-- A tree is a type of data structure used to represent hierarchical relationships. It consists of nodes, where
+each node contains a value and may have one or more child nodes connected to it. The topmost node in a tree
+is called the root, and nodes with no children are called leaves. Each node, except the root, has exactly one
+parent. Trees are often used to model structures such as file systems, organization charts, or the structure of
+a website.
+
+-- One common type of tree is the binary tree, where each node can have at most two children, typically referred
+to as the left and right child. Variations like binary search trees, AVL trees, and heaps add rules to organize
+or balance the tree, making them efficient for specific operations like searching, inserting, or deleting data.
+
+-- Trees are an essential concept in computer science because they allow efficient data storage, retrieval, and
+manipulation, especially when the relationships between data elements are naturally hierarchical.
+
