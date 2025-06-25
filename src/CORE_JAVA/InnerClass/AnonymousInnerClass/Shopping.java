@@ -1,14 +1,14 @@
 package CORE_JAVA.InnerClass.AnonymousInnerClass;
 
-public class ShoppingCart {
+public class Shopping {
 
     private double totalAmount;
 
-    public ShoppingCart(double totalAmount){
+    public Shopping(double totalAmount){
         this.totalAmount = totalAmount;
     }
 
-    public void paymentProcess(Payment paymentMethod){
+    public void processPayment(Payment paymentMethod){
         paymentMethod.pay(totalAmount);
     }
 

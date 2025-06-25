@@ -1,12 +1,9 @@
 package CORE_JAVA.InnerClass.MemberInnerClass;
 
-// Member Inner Class : Inner class access the properties of Outer Class
-
 public class Car {
 
-    private String model;
-
-    private boolean isEngineOn;
+    String model;
+    boolean isEngineOn;
 
     public Car(String model){
         this.model = model;
@@ -18,20 +15,20 @@ public class Car {
         void start(){
             if(!isEngineOn){
                 isEngineOn = true;
-                System.out.println(model + " engine started");
+                System.out.println(model + " Engine started");
             }
             else{
-                System.out.println(model + " engine is already on");
+                System.out.println("Engine is already On");
             }
         }
 
         void stop(){
             if(isEngineOn){
                 isEngineOn = false;
-                System.out.println(model + " engine stopped");
+                System.out.println(model + " Engine stopped");
             }
             else{
-                System.out.println(model + " engine is already off");
+                System.out.println("Engine is already off");
             }
         }
 

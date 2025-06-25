@@ -1,4 +1,6 @@
-class A{
+package CORE_JAVA.OOPS.OOPS_1.ClassesAndObjects;
+
+public class AnonymousObjects{
     public static void main(String[] args){
 
         /*

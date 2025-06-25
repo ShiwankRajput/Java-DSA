@@ -7,11 +7,11 @@ public class Computer {
 
     private OperatingSystem os;
 
-    public OperatingSystem getOs() {
+    public OperatingSystem getOs(){
         return os;
     }
 
-    public Computer(String brand, String model, String osName){
+    Computer(String brand, String model, String osName){
         this.brand = brand;
         this.model = model;
         this.os = new OperatingSystem(osName);
@@ -21,30 +21,29 @@ public class Computer {
 
         private String osName;
 
-        public OperatingSystem(String osName){
+        OperatingSystem(String osName){
             this.osName = osName;
         }
 
         public void displayInfo(){
-            System.out.println("Computer : " + model + ", OS : " + osName);
+            System.out.println("Model: " + model + ", OS: " + osName);
         }
 
     }
 
     static class USB{
 
-        private String usbType;
+        private String type;
 
-        public USB(String usbType){
-            this.usbType = usbType;
+        public USB(String type){
+            this.type = type;
         }
 
         public void displayInfo(){
-            System.out.println("USB type :- " + usbType);
+            System.out.println("USB type is : " + type);
         }
 
 
     }
-
 
 }

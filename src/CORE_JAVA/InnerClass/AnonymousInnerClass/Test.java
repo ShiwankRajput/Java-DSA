@@ -4,24 +4,21 @@ public class Test {
 
     public static void main(String[] args) {
 
-        ShoppingCart s = new ShoppingCart(200);
+        Shopping shopping = new Shopping(1000);
 
-        // CreditCardV0 is a class that implements Payment interface
-        CreditCardV0 c = new CreditCardV0("123");
-        s.paymentProcess(c);
+//        CreditCard card = new CreditCard("1X42");
 
-        // this is called anonymous inner class
-        s.paymentProcess(new Payment() {
+        shopping.processPayment(new Payment() {
             @Override
             public void pay(double amount) {
-                System.out.println("Paid " + amount + " using credit card");
+                System.out.println("Paid: " + amount + " using credit card");
             }
         });
 
-        s.paymentProcess(new Payment() {
+        shopping.processPayment(new Payment() {
             @Override
             public void pay(double amount) {
-                System.out.println("Paid " + amount + " GPay");
+                System.out.println("Paid: " + amount + " using paypal");
             }
         });
 

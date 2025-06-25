@@ -4,11 +4,11 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Computer c = new Computer("HP","ABC","XYZ");
-        c.getOs().displayInfo();
+        Computer com = new Computer("HP","SMX-111", "XYZ");
+        com.getOs().displayInfo();
 
-        Computer.USB usb = new Computer.USB("TYPE-C");
+        Computer.USB usb = new Computer.USB("Type-C");
+        usb.displayInfo();
 
     }
-
 }
