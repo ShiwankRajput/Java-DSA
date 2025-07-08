@@ -48,5 +48,54 @@ public class BinaryTree {
     }
 
 
+    // display elements -->
+    public void display(){
+        display(this.root, "");
+    }
+
+    private void display(Node node, String indent){
+        if(node == null){
+            return;
+        }
+        System.out.println(indent + node.value);
+        display(node.left, indent+"\t");
+        display(node.right, indent+"\t");
+    }
+
+    public void prettyDisplay(){
+        prettyDisplay(this.root, 0);
+    }
+
+    private void prettyDisplay(Node node, int level){
+        if(node == null){
+            return;
+        }
+
+        prettyDisplay(node.right, level+1);
+        for (int i=0; i<level; i++){
+            System.out.print("\t");
+        }
+        System.out.println("| " + node.value);
+
+        prettyDisplay(node.left, level+1);
+    }
+
+}
+
+class Main{
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        BinaryTree BT = new BinaryTree();
+        BT.populate(input);
+        BT.display();
+        System.out.print("\n\n\n");
+        BT.prettyDisplay();
+
+
+
+    }
 
 }
