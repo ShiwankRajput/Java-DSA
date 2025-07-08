@@ -1,4 +1,4 @@
-package CollectionFramework.MapInterface.LinkedHashMap;
+package CollectionFramework.MapInterface.HashMap.LinkedHashMap;
 
 // LRUCache = Least recently Used Cache ->
 

@@ -1,4 +1,4 @@
-package CollectionFramework.MapInterface.LinkedHashMap;
+package CollectionFramework.MapInterface.HashMap.LinkedHashMap;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

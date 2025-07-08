@@ -1,4 +1,4 @@
-package CollectionFramework.MapInterface.WeakHashMap;
+package CollectionFramework.MapInterface.HashMap.WeakHashMap;
 
 import java.lang.ref.WeakReference;
 

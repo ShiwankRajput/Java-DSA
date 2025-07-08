@@ -1,4 +1,4 @@
-package CollectionFramework.MapInterface.IdentityHashMap;
+package CollectionFramework.MapInterface.HashMap.IdentityHashMap;
 
 import java.util.HashMap;
 import java.util.IdentityHashMap;
