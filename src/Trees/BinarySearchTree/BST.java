@@ -2,45 +2,42 @@ package Trees.BinarySearchTree;
 
 public class BST {
 
-    public BST() {
+    public BST(){
 
     }
 
     public class Node{
-        private int value;
-        private int height;
-        private Node left;
-        private Node right;
+        int value;
+        Node left;
+        Node right;
+        int height;
 
-        public Node(int value) {
+        public Node(int value){
             this.value = value;
-        }
-
-        public int getValue() {
-            return value;
         }
     }
 
     private Node root;
 
-    public int height(Node node){
-        if(node == null){
-            return -1;
-        }
-        return node.height;
-    }
-
     public boolean isEmpty(){
         return root == null;
     }
 
-    // inserting an element in BST :>
+    public int height(Node node){
+        if(node == null){
+            return -1;
+        }
+
+        return node.height;
+    }
+
+    // inserting an element in BST ->
     public void insert(int value){
         if(root == null){
             root = new Node(value);
         }
         else{
-            insert(value, this.root);
+            insert(value,this.root);
         }
     }
 
@@ -58,15 +55,48 @@ public class BST {
             node.right = insert(value,node.right);
         }
 
-        // after adding element height increase by 1
+        // updating height of a tree
         node.height = Math.max(height(node.left),height(node.right)) + 1;
 
-        return node;  // returning root only at last
+        return node;  // returning root node at last recursion call
+    }
+
+
+    // displaying element in BST ->
+    public void display(){
+        display(this.root,"Root Node : ");
+    }
+
+    private void display(Node node, String details){
+        if(node == null){
+            return;
+        }
+
+        System.out.println(details + node.value);
+
+        display(node.left, "Left Child of " + node.value + " : ");
+        display(node.right, "Right Child of " + node.value + " : ");
+
+    }
+
+
+    // checking if tree is balanced or not ->
+    public boolean balanced(){
+        return balanced(this.root);
+    }
+
+    private boolean balanced(Node node){
+        if(node == null){
+            return true;
+        }
+
+        return Math.abs(height(node.left) - height(node.right)) <= 1 && balanced(node.left) && balanced(node.right);
     }
 
 }
 
 class Main{
+
     public static void main(String[] args) {
 
         BST myTree = new BST();
@@ -77,6 +107,14 @@ class Main{
         myTree.insert(11);
         myTree.insert(20);
         myTree.insert(8);
+        myTree.insert(3);
+        myTree.insert(2);
+        myTree.insert(1);
+
+        myTree.display();
+        System.out.println(myTree.balanced());
+
 
     }
+
 }
