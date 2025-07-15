@@ -1,5 +1,7 @@
 package Trees.BinarySearchTree;
 
+import Trees.BinaryTree.BinaryTree;
+
 public class BST {
 
     public BST(){
@@ -126,6 +128,56 @@ public class BST {
 
     }
 
+
+    // element traversal -->
+
+    // (1) - Preorder :
+
+    public void preOrder(){
+        preOrder(this.root);
+    }
+    private void preOrder(Node node){
+        if(node == null){
+            return;
+        }
+
+        System.out.print(node.value + ", ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+
+    // (2) - Inorder :
+
+    public void inOrder(){
+        inOrder(this.root);
+    }
+    private void inOrder(Node node){
+        if (node == null){
+            return;
+        }
+
+        inOrder(node.left);
+        System.out.print(node.value + ", ");
+        inOrder(node.right);
+
+    }
+
+    // (3) - Postorder :
+
+    public void postOrder(){
+        postOrder(this.root);
+    }
+    private void postOrder(Node node){
+        if(node == null){
+            return;
+        }
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.print(node.value + ", ");
+    }
+
 }
 
 class MainClass{
@@ -148,6 +200,16 @@ class MainClass{
 //        obj.display();
 //        System.out.println("Is Tree balanced ? " + obj.isBalanced());
 
+
+        // Traversals -->
+        int[] nums1 = {10,20,12,15,13};
+        BST obj1 = new BST();
+        obj1.populate(nums1);
+        obj1.inOrder();
+        System.out.println();
+        obj1.preOrder();
+        System.out.println();
+        obj1.postOrder();
 
 
     }
