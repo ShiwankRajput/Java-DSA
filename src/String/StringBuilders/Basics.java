@@ -1,4 +1,4 @@
-package String_StringBuilders;
+package String.StringBuilders;
 
 public class Basics {
 

@@ -1,4 +1,4 @@
-package String_StringBuilders.questions;
+package String.StringBuilders.questions;
 
 /*
 
