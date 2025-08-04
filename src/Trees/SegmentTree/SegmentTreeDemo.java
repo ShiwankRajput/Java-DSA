@@ -74,6 +74,7 @@ public class SegmentTreeDemo {
         System.out.println("Node value -> " + node.data);
         System.out.println("Node start interval -> " + node.startInterval);
         System.out.println("Node end interval -> " + node.endInterval);
+        System.out.println();
 
         display(node.right);
 
@@ -142,6 +143,8 @@ class Main{
         System.out.println( );
         System.out.println("Answer of the query -> " + st.query(2,6));
         System.out.println("After Updating the value of the Updated Tree -> " + st.update(3,14));
+        System.out.println();
+        st.display();
 
     }
 
