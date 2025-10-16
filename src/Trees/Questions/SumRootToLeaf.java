@@ -8,6 +8,8 @@ import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+
 public class SumRootToLeaf {
 
     public int sumNumbers(TreeNode root) {
@@ -84,3 +86,5 @@ public class SumRootToLeaf {
     }
 
 }
+
+ */

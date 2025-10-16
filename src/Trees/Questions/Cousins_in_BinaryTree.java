@@ -5,6 +5,9 @@ package Trees.Questions;
 
 import javax.swing.tree.TreeNode;
 
+/*
+
+
 public class Cousins_in_BinaryTree {
 
     public static void main(String[] args) {
@@ -53,3 +56,5 @@ public class Cousins_in_BinaryTree {
     }
 
 }
+
+ */

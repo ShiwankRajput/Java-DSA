@@ -9,6 +9,8 @@ import javax.swing.tree.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/*
+
 public class SymmetricTree {
 
     public static void main(String[] args) {
@@ -58,3 +60,5 @@ public class SymmetricTree {
     }
 
 }
+
+ */

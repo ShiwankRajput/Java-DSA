@@ -4,6 +4,8 @@ package Trees.Questions;
 
 import javax.swing.tree.TreeNode;
 
+/*
+
 public class IsPathExist {
 
     public static void main(String[] args) {
@@ -38,3 +40,5 @@ public class IsPathExist {
     }
 
 }
+
+ */

@@ -2,6 +2,8 @@ package Trees.Questions;
 
 import javax.swing.tree.TreeNode;
 
+/*
+
 public class LowestCommonAncestor {
 
     public static void main(String[] args) {
@@ -35,3 +37,5 @@ public class LowestCommonAncestor {
     }
 
 }
+
+ */

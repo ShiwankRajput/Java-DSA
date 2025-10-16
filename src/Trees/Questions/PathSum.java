@@ -5,6 +5,8 @@ package Trees.Questions;
 
 import javax.swing.tree.TreeNode;
 
+/*
+
 public class PathSum {
 
     boolean result = false;
@@ -36,3 +38,5 @@ public class PathSum {
     }
 
 }
+
+ */

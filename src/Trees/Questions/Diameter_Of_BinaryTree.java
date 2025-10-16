@@ -5,6 +5,9 @@ package Trees.Questions;
 
 import javax.swing.tree.TreeNode;
 
+/*
+
+
 public class Diameter_Of_BinaryTree {
 
     int diameter = 0;
@@ -34,3 +37,5 @@ public class Diameter_Of_BinaryTree {
     }
 
 }
+
+ */
