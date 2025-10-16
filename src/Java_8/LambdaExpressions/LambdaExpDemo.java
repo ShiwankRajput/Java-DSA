@@ -27,6 +27,8 @@ public class LambdaExpDemo {
 
 }
 
+// Functional Interface have only single abstract method and multiple default & static methods
+
 @FunctionalInterface
 interface MathOperation{
 
