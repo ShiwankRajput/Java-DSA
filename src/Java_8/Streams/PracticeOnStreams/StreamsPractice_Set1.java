@@ -91,6 +91,77 @@ public class StreamsPractice_Set1 {
                 .filter(x -> x>50)
                 .findFirst().orElseThrow());
 
+        // 11: Filter names longer than 4 characters
+        List<String> list10 = Arrays.asList("Shiwank","Dev","Tarang","Shaksham","Ravi");
+        System.out.println(list10
+                .stream()
+                .filter(x -> x.length()>4)
+                .toList());
+
+        // 12: Convert a Set to sorted List
+        Set<String> set = new HashSet<>(Arrays.asList("Shiwank","Dev","Tarang"));
+        List<String> names = set.stream()
+                .sorted()
+                .toList();
+        System.out.println("Sorted names -> " + names);
+
+        // 13: Find total length of all strings in a list
+        List<String> list11 = Arrays.asList("Shiwank","Raj","Ravi","Himanshu","Vishnoi");
+        int totalLength = list11
+                .stream()
+                .mapToInt(String::length)
+                .sum();
+        System.out.println("Total length of all Strings -> " + totalLength);
+
+        // 14: Create a Map of word and its length
+        List<String> list12 = Arrays.asList("Shiwank","Raj","Ravi","Himanshu","Vishnoi");
+        Map<String, Integer> map1 = list12.stream()
+                .collect(Collectors.toMap(x->x, String::length));
+        System.out.println(map1);
+
+
+        // 15: Count frequency of each element in a list
+        List<Integer> list13 = Arrays.asList(1,4,6,2,8,6,9,1,3,2,5,3,5,7,8,9,3);
+        Map<Integer, Long> map2 = list13.stream()
+                .collect(Collectors.groupingBy(x -> x, Collectors.counting()));
+
+        System.out.println(map2);
+
+
+        // 16: Get list of keys from a Map
+        Map<Integer, String> map3 = Map.of(1,"A",2,"B",3,"C",4,"D");
+        System.out.println(map3.keySet()
+                .stream()
+                .toList());
+
+        // 17: Filter Map entries by value
+        Map<String, Integer> map4 = Map.of("Ram", 85, "Sita", 92, "Ravi", 60);
+        Map<String, Integer> map5 = map4.entrySet().stream()
+                .filter(x -> x.getValue()>=65)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        System.out.println(map5);
+
+
+        // 18: Find the longest string in a list
+        List<String> list14 = Arrays.asList("Shiwank","Dev","Raj","Ravi");
+        String longest = list14.stream()
+                .max(Comparator.comparingInt(String::length))
+                .orElse("No value");
+        System.out.println("Longest String -> " + longest);
+
+
+        // 19: Flatten list of lists
+        List<List<Integer>> list15 = Arrays.asList(
+                Arrays.asList(1, 2),
+                Arrays.asList(3, 4),
+                Arrays.asList(5, 6)
+        );
+
+        System.out.println(list15.stream()
+                .flatMap(Collection::stream)
+                .toList());
+
+
     }
 
 }

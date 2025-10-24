@@ -2,7 +2,11 @@ package Java_8.Streams.PracticeOnStreams;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Map;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class StreamsPractice_Set2 {
 
@@ -112,8 +116,86 @@ public class StreamsPractice_Set2 {
 
 
         // 13. Count how many numbers are prime
+        IntStream stream8 = IntStream.of(1,2,3,4,5,6,7,8,9);
+        System.out.println(Arrays.toString(stream8
+                .filter(StreamsPractice_Set2::isPrime)
+                .toArray()));
 
 
+        // 14. Find median of array
+        IntStream stream9 = IntStream.of(3,1,5,2,4,6);
+        int[] sortedArray1 = stream9.sorted().toArray();
+
+        int median = sortedArray1.length%2 == 0 ?
+                (sortedArray1[sortedArray1.length/2] + sortedArray1[(sortedArray1.length/2) - 1])/2
+        : sortedArray1[sortedArray1.length/2];
+
+        System.out.println("Median of array = " + median);
+
+
+        // 15.Find frequency of each element
+        IntStream stream10 = IntStream.of(2,6,3,7,3,9,2,8,4,6,1,4,8);
+        Map<Integer, Long> map = stream10
+                .boxed()
+                .collect(Collectors.groupingBy(x -> x, Collectors.counting()));
+
+        System.out.println(map);
+
+
+        // 16. Convert int[] to comma-separated String
+        int[] arr8 = {1,2,3,4,5};
+        String string = Arrays.stream(arr8)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining(", "));
+
+        System.out.println("Array combined string = " + string);
+        System.out.println(string.getClass().getName());
+
+
+        // 17. Find sum of squares of all elements
+        IntStream stream11 = IntStream.of(1,2,3,4,5);
+        int sum = stream11.map(x -> x*x).sum();
+        System.out.println("Sum of all elements in array = " + sum);
+
+
+        // 18. Merge two arrays and remove duplicates
+        int[] arr9 = {5,7,3,8,1,4,1,7,4};
+        int[] arr10 = {1,5,2,6,8};
+
+        int[] mergedArray = IntStream.concat(IntStream.of(arr9), IntStream.of(arr10))
+                .distinct()
+                .toArray();
+
+        System.out.println("Merged array -> " + Arrays.toString(mergedArray));
+
+
+        // 19. Generate first 10 even numbers using Stream
+        int[] evenArray = IntStream
+                .iterate(2, x->x+2)
+                .limit(10)
+                .toArray();
+        System.out.println("Even number Array -> " + Arrays.toString(evenArray));
+
+
+        // 20. Check if array is sorted
+        int[] arr11 = {1,2,3,4,5,0};
+        boolean sortedOrNot = IntStream.range(0,arr11.length-1)
+                .allMatch(i -> arr11[i] < arr11[i+1]);
+
+        System.out.println("Array sorted or not -> " + sortedOrNot);
+
+
+    }
+
+    private static boolean isPrime(int n){
+
+        for(int i=2; i<n; i++){
+            if(n % i == 0){
+                return false;
+            }
+        }
+
+        return true;
 
     }
 
