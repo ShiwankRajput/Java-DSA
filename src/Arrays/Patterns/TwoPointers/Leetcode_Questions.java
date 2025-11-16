@@ -1,6 +1,6 @@
 package Arrays.Patterns.TwoPointers;
 
-import java.util.Arrays;
+import java.util.*;
 
 
 public class Leetcode_Questions {
@@ -13,6 +13,9 @@ public class Leetcode_Questions {
 
         int[] height = {1,8,6,2,5,4,8,3,7};
         System.out.println("Container with most water -> " + maxArea(height));
+
+        int[] nums = {-1,0,1,2,-1,-4};
+        System.out.println("3 Sum -> " + threeSum(nums));
 
     }
 
@@ -73,6 +76,68 @@ public class Leetcode_Questions {
         }
 
         return maxArea;
+
+    }
+
+    // (3) -> [Three Sum]
+    // https://leetcode.com/problems/3sum/
+    public static List<List<Integer>> threeSum(int[] nums) {
+
+
+        // (2) - Better solution
+
+        /* TC = O(n^2), SC = O(n)
+
+            Set<List<Integer>> set1 = new HashSet<>();
+            Set<Integer> set2 = new HashSet<>();
+
+            for(int i=0; i<nums.length; i++){
+                set2.clear();
+                for(int j=i+1; j<nums.length; j++){
+                    int num = -(nums[i]+nums[j]);
+                    if(set2.contains(num)){
+                        List<Integer> result = Arrays.asList(nums[i],nums[j],num);
+                        Collections.sort(result);
+                        set1.add(result);
+                    }
+                    else{
+                        set2.add(nums[j]);
+                    }
+                }
+            }
+
+            List<List<Integer>> ans = new ArrayList<>(set1);
+
+            return ans;
+
+        */
+
+
+        // (1) - Brute force solution
+
+        /*  TC = O(n^3), SC = O(n)
+
+            Set<List<Integer>> set = new HashSet<>();
+
+            for(int i=0; i<nums.length; i++){
+                for(int j=i+1; j<nums.length; j++){
+                    for(int k=j+1; k<nums.length;k++){
+                        if(nums[i]+nums[j]+nums[k] == 0){
+                            List<Integer> result = Arrays.asList(nums[i],nums[j],nums[k]);
+                            Collections.sort(result);
+                            set.add(result);
+                        }
+                    }
+                }
+            }
+
+            List<List<Integer>> ans = new ArrayList<>(set);
+
+            return ans;
+
+        */
+
+        return null;
 
     }
 
