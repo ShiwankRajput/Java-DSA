@@ -1,6 +1,8 @@
 package Arrays.Patterns.SlidingWindow;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Leetcode_Questions {
 
@@ -17,6 +19,11 @@ public class Leetcode_Questions {
 
         String string = "pwwkew";
         System.out.println("Longest Substring without repeating character -> " + lengthOfLongestSubstring(string));
+
+
+        String s = "abab";
+        String p = "ab";
+        System.out.println("Anagram -> " + findAnagrams(s,p));
 
 
     }
@@ -147,6 +154,57 @@ public class Leetcode_Questions {
         }
 
         return maxWindowSize;
+
+    }
+
+    // (438) - Find All anagrams in String :
+    // https://leetcode.com/problems/find-all-anagrams-in-a-string/
+    public static List<Integer> findAnagrams(String s, String p) {
+
+        if (p.length() > s.length()) {
+            return new ArrayList<>();
+        }
+
+        int[] arr1 = new int[26];
+        int[] arr2 = new int[26];
+
+        for (int i = 0; i < p.length(); i++) {
+            arr1[p.charAt(i) - 'a']++;
+        }
+
+        for (int i = 0; i < p.length(); i++) {
+            arr2[s.charAt(i) - 'a']++;
+        }
+
+        int start = 0;
+        int end = p.length() - 1;
+        List<Integer> list = new ArrayList<>();
+
+        while (end < s.length()) {
+
+            boolean bool = true;
+
+            for (int i = 0; i < arr1.length; i++) {
+                if (arr1[i] != arr2[i]) {
+                    bool = false;
+                    break;
+                }
+            }
+
+            if (bool) {
+                list.add(start);
+            }
+
+            end++;
+            if (end < s.length()) {
+                arr2[s.charAt(end) - 'a']++;
+            }
+            arr2[s.charAt(start) - 'a']--;
+            start++;
+
+        }
+
+        return list;
 
     }
 
