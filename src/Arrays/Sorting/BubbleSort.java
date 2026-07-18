@@ -7,14 +7,25 @@ public class BubbleSort {
     public static void main(String[] args) {
 
         int[] arr = {-1,-32,0,78,65};
-        System.out.println("SORTED ARRAY ---> " + Arrays.toString(bubbleSorting(arr)));
+        System.out.println("SORTED ARRAY -> " + Arrays.toString(bubbleSorting(arr)));
 
-        int[] nums = {1,3,2,5,4};
-        bubbleSortRecursion(nums, 0, 0);
-        System.out.println(Arrays.toString(nums));
+        int[] nums = {-1,-32,0,78,65};
+        bubbleSortRecursion(nums, 0, 0, false);
+        System.out.println("SORTED ARRAY -> " + Arrays.toString(nums));
 
     }
 
+    /*
+
+        Time Complexity : Best case = O(n)
+                          Average case = O(n^2)
+                          Worst Case = O(n^2)
+
+        Space Complexity : Best case = O(1)
+                           Average case = O(1)
+                           Worst Case = O(1)
+
+    */
     public static int[] bubbleSorting(int[] arr){
 
         for(int i=1; i<=(arr.length-1); i++){
@@ -39,7 +50,19 @@ public class BubbleSort {
         return arr;
     }
 
-    public static void bubbleSortRecursion(int[] arr, int i, int j){
+
+    /*
+
+        Time Complexity : Best case = O(n)
+                          Average case = O(n^2)
+                          Worst Case = O(n^2)
+
+        Space Complexity : Best case = O(n)
+                           Average case = O(n)
+                           Worst Case = O(n)
+
+    */
+    public static void bubbleSortRecursion(int[] arr, int i, int j, boolean swapped){
 
         if(i == arr.length-1){
             return;
@@ -48,14 +71,21 @@ public class BubbleSort {
         if(j <= arr.length-i-2){
 
             if(arr[j] > arr[j+1]){
+                swapped = true;
                 swap(arr, j, j+1);
             }
 
-            bubbleSortRecursion(arr, i, j+1);
+            bubbleSortRecursion(arr, i, j+1, swapped);
 
         }
+        else{
 
-        bubbleSortRecursion(arr, i+1, 0);
+            if(!swapped){
+                return;
+            }
+
+            bubbleSortRecursion(arr, i+1, 0, false);
+        }
 
     }
 
